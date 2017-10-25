@@ -3,7 +3,7 @@ compiler: clang
 dist: trusty
 
 before_install:
-  - sudo add-apt-repository ppa:kzemek/boost -y
+  - sudo add-apt-repository ppa:amplidata/trustycal -y
   - sudo apt-get -qq update
   - sudo apt-get update
   - sudo apt-get install -y
@@ -11,7 +11,7 @@ before_install:
       autoconf
       autoconf-archive
       libtool
-      libboost1.58-all-dev
+      boost-all # from trustycal ppa
       liblz4-dev
       liblzma-dev
       make
