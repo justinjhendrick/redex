@@ -1,0 +1,22 @@
+language: cpp
+compiler: clang
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y
+      g++
+      automake
+      autoconf
+      autoconf-archive
+      libtool
+      libboost-all-dev
+      liblz4-dev
+      liblzma-dev
+      make
+      zlib1g-dev
+      binutils-dev
+      libjemalloc-dev
+      libiberty-dev
+      libjsoncpp-dev
+
+script: autoreconf -ivf && ./configure && make -j4
