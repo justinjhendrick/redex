@@ -3,8 +3,7 @@ compiler: clang
 dist: trusty
 
 before_install:
-  - eval $(sudo sh get_boost.sh)
-  - ls $BOOST_ROOT
+  - sudo sh get_boost.sh
   - sudo apt-get install -y
       automake
       autoconf
