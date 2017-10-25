@@ -3,10 +3,7 @@ compiler: clang
 dist: trusty
 
 before_install:
-  - sudo add-apt-repository ppa:amplidata/trustycal -y
-  - sudo apt-get update -y
-  - apt-cache search boost
-  - sudo apt-get install -y boost-all
+  - sh get_boost.sh
   - sudo apt-get install -y
       automake
       autoconf
