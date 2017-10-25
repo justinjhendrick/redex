@@ -1,11 +1,12 @@
 language: cpp
 compiler: clang
-dist: xenial
+dist: trusty
 
 before_install:
+  - sudo add-apt-repository ppa:kzemek/boost -y
   - sudo apt-get -qq update
+  - sudo apt-get update
   - sudo apt-get install -y
-      g++
       automake
       autoconf
       autoconf-archive
