@@ -9,7 +9,7 @@ before_install:
       autoconf
       autoconf-archive
       libtool
-      libboost-all-dev
+      libboost1.63-all-dev
       liblz4-dev
       liblzma-dev
       make
