@@ -11,7 +11,7 @@ before_install:
       autoconf
       autoconf-archive
       libtool
-      boost-all # from trustycal ppa
+      boost-all
       liblz4-dev
       liblzma-dev
       make
