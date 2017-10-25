@@ -3,7 +3,6 @@ compiler: clang
 dist: trusty
 
 before_install:
-  - sudo sh get_boost.sh
   - sudo apt-get install -y
       automake
       autoconf
@@ -18,5 +17,6 @@ before_install:
       libjemalloc-dev
       libiberty-dev
       libjsoncpp-dev
+  - sudo sh get_boost.sh
 
 script: autoreconf -ivf && ./configure && make -j4
