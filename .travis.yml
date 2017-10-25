@@ -5,7 +5,7 @@ dist: trusty
 before_install:
   - sudo add-apt-repository ppa:amplidata/trustycal -y
   - sudo apt-get -qq update
-  - sudo apt-get install -y boost-all_1.59.0-0
+  - sudo apt-get install -y boost-all_1.59
   - sudo apt-get install -y
       automake
       autoconf
