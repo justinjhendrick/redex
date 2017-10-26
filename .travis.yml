@@ -1,3 +1,4 @@
+sudo: required
 language: cpp
 compiler: gcc-4.9
 dist: trusty
@@ -18,5 +19,6 @@ before_install:
       libiberty-dev
       libjsoncpp-dev
   - sudo sh get_boost.sh
+install: export CXX='g++-4.9'
 
 script: autoreconf -ivf && ./configure && make -j4
