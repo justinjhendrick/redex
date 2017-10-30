@@ -1,6 +1,6 @@
 sudo: required
 language: cpp
-compiler: gcc
+compiler: gcc-4.9
 dist: trusty
 
 before_install:
@@ -20,7 +20,7 @@ before_install:
       libjemalloc-dev
       libiberty-dev
       libjsoncpp-dev
-  - export CXX='g++-4.9'
+  - export CXX='gcc-4.9'
   - sudo sh get_boost.sh
 
-script: autoreconf -ivf && ./configure CXX='g++-4.9' CXXFLAGS='std=-stdlib=libstdc++' LDFLAGS='std=libstdc++' && make -j4
+script: autoreconf -ivf && ./configure CXXFLAGS='std=-stdlib=libstdc++' LDFLAGS='std=libstdc++' && make -j4
