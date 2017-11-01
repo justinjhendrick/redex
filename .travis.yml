@@ -23,4 +23,9 @@ before_install:
   - export CXX='gcc-4.9'
   - sudo sh get_boost.sh
 
-script: autoreconf -ivf && ./configure CXX=/usr/bin/g++-4.9 CXXFLAGS='std=-stdlib=libstdc++' LDFLAGS='std=libstdc++' && make -j4
+script:
+  - echo $CXX
+  - $CXX --version
+  - /usr/bin/g++-4.9 --version
+  - g++-4.9 --version
+  - autoreconf -ivf && ./configure CXX=/usr/bin/g++-4.9 CXXFLAGS='std=-stdlib=libstdc++' LDFLAGS='std=libstdc++' && make -j4
