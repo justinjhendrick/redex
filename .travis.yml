@@ -25,5 +25,5 @@ before_install:
 
 script:
   - $CXX --version
-  - autoreconf -ivf && ./configure CXX=/usr/bin/g++-4.9 CXXFLAGS='std=libstdc++' LDFLAGS='std=libstdc++' && make -j4
+  - autoreconf -ivf && ./configure CXX=/usr/bin/g++-4.9 CXXFLAGS='-stdlib=libstdc++' LDFLAGS='-stdlib=libstdc++' && make -j4
   - cat config.log
